@@ -1,0 +1,23 @@
+info:
+  name: Get User copy
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: http://localhost:8070/api/users/
+  body:
+    type: json
+    data: |-
+      {
+        name: "John",
+        email: "john@doe.com"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
